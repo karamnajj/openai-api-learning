@@ -23,7 +23,7 @@ tools = [{
 
 response = client.responses.create(
     model="gpt-5.5",
-    input="What's the weather like in Pécs right now?",
+    input="write me a hiku",
     tools=tools
 )
 
