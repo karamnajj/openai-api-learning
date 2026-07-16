@@ -12,11 +12,11 @@ class Recipe(BaseModel):
 
 response = client.responses.parse(
     model="gpt-5.5",
-    input="Give me a sample recipe for lasagna",
+    input="give me a recipe for butter chicken",
     text_format=Recipe
 )
 
 recipe = response.output_parsed
 print(recipe.name)
 print(recipe.ingredients)
-print(recipe.minutes_to_cook)
+print(f"minutes: recipe.minutes_to_cook")

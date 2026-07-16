@@ -12,7 +12,7 @@ response = client.responses.create(
 )
 
 history.append({"role": "assistant", "content": response.output_text})
-history.append({"role": "user", "content": "what do i study and where?"})
+history.append({"role": "user", "content": "tell me a joke"})
 
 response2 = client.responses.create(
     model="gpt-5.5",
