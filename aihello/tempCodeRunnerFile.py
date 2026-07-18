@@ -1,1 +1,1 @@
-what do i study and where?
+stream

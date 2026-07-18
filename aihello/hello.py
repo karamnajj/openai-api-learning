@@ -16,7 +16,10 @@ history.append({"role": "user", "content": "tell me a joke"})
 
 response2 = client.responses.create(
     model="gpt-5.5",
-    input=history
+    input=history,
+    stream=True
 )
 
-print(response2.output_text)
+for event in response2:
+    if event.type == "response.output_text.delta":
+        print(event.delta, end="", flush=True)
